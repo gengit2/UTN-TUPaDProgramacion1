@@ -1,0 +1,38 @@
+hemisferio= input("¿En hemisferio se encuentra Norte o Sur [N/S]? ").lower()
+mes=input("¿En qué mes se encuentra? ").lower()
+dia=int(input("¿En qué dia del mes se encuentra? (en números) "))
+
+inv_nort=["diciembre","enero", "febrero","marzo"]
+prim_nort=["marzo", "abril", "mayo", "junio"]
+veran_nort=["junio", "julio", "agosto", "septiembre"]
+oto_nort=["septiembre", "octubre", "noviembre", "diciembre"]
+
+veran_sur=["diciembre","enero", "febrero","marzo"]
+oto_sur=["marzo", "abril", "mayo", "junio"]
+inv_sur=["junio", "julio", "agosto", "septiembre"]
+prim_sur=["septiembre", "octubre", "noviembre", "diciembre"]
+
+if hemisferio=="n":
+    if (((mes in inv_nort) and (dia>=21)) or ((mes in inv_nort) and (dia<=20))) and dia<=31:  
+        print("Invierno")
+    elif (((mes in prim_nort) and (dia>=21)) or ((mes in prim_nort) and (dia<=20))) and dia<=31:
+        print("Primavera")
+    elif (((mes in oto_nort) and (dia>=21)) or ((mes in oto_nort) and (dia<=20))) and dia<=31:
+        print("Otoño")
+    elif (((mes in veran_nort) and (dia>=21)) or ((mes in veran_nort) and (dia<=20))) and dia<=31:
+        print("Verano")
+    else:
+        print("Algún dato es inválido")
+elif hemisferio=="s":
+    if (((mes in inv_sur) and (dia>=21)) or ((mes in inv_sur) and (dia<=20))) and dia<=31:
+        print("Invierno")
+    elif (((mes in prim_sur) and (dia>=21)) or ((mes in prim_sur) and (dia<=20))) and dia<=31:
+        print("Primavera")
+    elif (((mes in oto_sur) and (dia>=21)) or ((mes in oto_sur) and (dia<=20))) and dia<=31:
+        print("Otoño")
+    elif (((mes in veran_sur) and (dia>=21)) or ((mes in veran_sur) and (dia<=20))) and dia<=31:
+        print("Verano")
+    else:
+        print("Algún dato es inválido")
+else:
+    print("hemisferio inválido")
